@@ -1,20 +1,44 @@
 package checkpoint1;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Zoo {
-    List<Animal> animals;
+    private List<Animal> animals;
 
-//    public Zoo(List animals){
-//        this.animals = animals;
-//    }
-
-    public void addAnimal(Animal animal){
-      animals.add(animal);
+    Zoo(){
+        this.animals = new ArrayList();
     }
 
-//    @Override
-//    public String toString() {
-//        return  "animals=" + animals;
-//    }
+    public void addAnimal(Animal animal){
+      this.animals.add(animal);
+    }
+
+    public List filterBy(String animalType){
+        List<Animal> filteredList = new ArrayList();
+
+        for (Animal animal: this.animals) {
+            if(animal.getType().equals(animalType.toLowerCase())){
+                filteredList.add(animal);
+            }
+        }
+        return filteredList;
+    }
+
+    public int findAverageAge(String type){
+        int sum = 0;
+        List<Animal> filteredAnimalList = filterBy(type);
+
+        for (Animal animal: filteredAnimalList) {
+            sum += animal.getAge();
+        }
+        System.out.println(filteredAnimalList);
+        int averageAge = sum/filteredAnimalList.size();
+        return averageAge;
+    }
+
+    @Override
+    public String toString() {
+        return  "animals=" + animals;
+    }
 }
