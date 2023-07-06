@@ -3,7 +3,7 @@ package check1;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Library {
+class Library {
     private List<String> books = new ArrayList<>();
 
     Library(){}
