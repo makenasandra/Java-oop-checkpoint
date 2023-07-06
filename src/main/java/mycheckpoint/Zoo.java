@@ -1,4 +1,4 @@
-package checkpoint1;
+package mycheckpoint;
 
 import java.util.ArrayList;
 import java.util.List;

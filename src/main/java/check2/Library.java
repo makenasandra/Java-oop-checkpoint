@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
-    private List<String> books;
+    private List<String> books = new ArrayList<>();;
 
     Library(){
-        this.books = new ArrayList<>();
     }
 
     public void addBook(String book){

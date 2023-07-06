@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
-    private List<String> customers;
+    private List<String> customers = new ArrayList<>();
     Bank(){
-        this.customers = new ArrayList<>();
     }
 
     public void addCustomer(String customer){

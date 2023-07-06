@@ -1,4 +1,4 @@
-package checkpoint1;
+package mycheckpoint;
 
 public class Animal {
     private String name;
